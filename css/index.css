@@ -1,0 +1,68 @@
+/* Map wrapper for drag-to-pan */
+.map-wrapper {
+  width: 100%;
+  height: 100vh;
+  overflow: scroll;
+  cursor: grab;
+}
+
+/* Container for the map and buttons */
+.container {
+  position: relative;
+  width: 2000px; /* adjust map size */
+  height: auto;
+}
+
+.container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Buttons */
+.container .btn {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  background-color: #555;
+  color: white;
+  font-size: 14px;
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  text-align: center;
+  opacity: 0.9;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.container .btn:hover {
+  background-color: black;
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+
+.btn.godrick { top: 72%; left: 32%; }
+.btn.malenia { top: 9%; left: 59%; }
+.btn.radahn { top: 72%; left: 65%; }
+.btn.morgott { top: 41.5%; left: 49.5%; }
+.btn.rykard { top: 30%; left: 22%; }
+
+
+#modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.85);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  display: none;
+  max-width: 400px;
+  text-align: center;
+  z-index: 1000;
+}
+
+#modal.show {
+  display: block;
+}
